@@ -121,9 +121,7 @@ function Utils(errorOutputId) { // eslint-disable-line no-unused-vars
         if (!video) {
             video = document.createElement('video');
         }
-        if (self.stream){
-            self.stream.stop();
-        }
+        
         let videoConstraint = constraints[resolution];
         if (!videoConstraint) {
             videoConstraint = true;
