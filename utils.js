@@ -117,7 +117,19 @@ function Utils(errorOutputId) { // eslint-disable-line no-unused-vars
         //     'qvga': {width: {exact: 320}, height: {exact: 240}},
         //     'vga': {width: {exact: 640}, height: {exact: 480}}};
         const constraints = { width:320,height:240 };
-        let video = document.getElementById(videoId);
+        var video = document.getElementById(videoId);
+
+        var ua = navigator.userAgent.toLowerCase();
+        var is_safari = (ua.indexOf("safari/") > -1 && ua.indexOf("chrome") < 0);
+        if(is_safari) {
+            video = document.getElementById(videoId);
+            setTimeout(function() {
+               video.play();
+            }, 50);
+        }    
+
+
+        
         if (!video) {
             video = document.createElement('video');
         }
