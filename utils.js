@@ -127,7 +127,7 @@ function Utils(errorOutputId) { // eslint-disable-line no-unused-vars
             videoConstraint = true;
         }
 
-        navigator.mediaDevices.getUserMedia({video: videoConstraint, audio: false ,video:{ 'facingMode': "user" }})
+        navigator.mediaDevices.getUserMedia({ audio: false ,video:{ 'facingMode': "user",width:320,height:240 }})
             .then(function(stream) {
                 video.srcObject = stream;
                 video.play();
