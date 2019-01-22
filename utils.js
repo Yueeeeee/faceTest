@@ -127,9 +127,6 @@ function Utils(errorOutputId) { // eslint-disable-line no-unused-vars
                video.play();
             }, 50);
         }    
-
-
-        
         if (!video) {
             video = document.createElement('video');
         }
